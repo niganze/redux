@@ -34,7 +34,6 @@ const Register = () => {
         console.log(error.response);
       }
   }
-  
 return (
         <form className='register'onSubmit={handleSubmit(onSubmit)}>
           <h1>Create an account</h1>

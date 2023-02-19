@@ -1,4 +1,8 @@
 import { Link, useParams } from "react-router-dom";
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
+import { FcVoicePresentation } from "react-icons/fc";
+import { FcLike } from "react-icons/fc";
 import "./Singlepost.css";
 import React  from 'react'
 export default function Singlepost({AllBlogs}) {
@@ -6,8 +10,27 @@ const { blogId } = useParams();
   console.log(blogId);
   const single = AllBlogs.find((item) => item._id === blogId);
   console.log(single);
-  const {title, image, content,author,date } = single;
-  
+  const {title, image, content,author,date} = single;
+  const {reset}=useForm();
+  const onSubmit = async (data) => {
+    
+    try {
+      await axios.post(
+        `https://blogapi-uvr7.onrender.com/api/v1/comment/addcomment/${blogId}`, data,
+        {
+          headers: {
+            "content-Type": "multipart/form-data",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      alert('comment posted');
+      reset();
+    }
+    catch (error) {
+      console.log(error.response);
+    }
+  }
   
   return (
     <>
@@ -40,8 +63,8 @@ const { blogId } = useParams();
           {content}
         </p>
         <div className="singlePostEdit">
-            <i className="singlepostIcon fa-solid fa-pen-to-square"></i>
-            <i className="singlepostIcon  fa-solid fa-trash"></i>
+            <i className="singlepostIcon fa-solid fa-pen-to-square"><FcVoicePresentation/></i>
+            <i className="singlepostIcon  fa-solid fa-trash"><FcLike/></i>
             </div>
             <div className="comments">
               <div className="form">
