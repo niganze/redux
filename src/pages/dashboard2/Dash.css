@@ -1,0 +1,278 @@
+#Dashbord h2{
+    margin-bottom: 3rem;
+}
+.blogContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 100vh;
+    
+    border-radius: 0.5rem;
+    padding:  1rem;
+}
+.blogMenu{
+    flex-basis: 30%;
+    border-left: 15px solid rgb(6, 43, 206);
+    background-color: black;
+    border-radius: 0.5rem 0 0 0.5rem;
+    opacity: 0.7;
+}
+.blogMenu ul{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+ul a li{
+    display: block;
+    padding: 1rem  1rem;
+    height: 50px;
+    margin-left: 0.1rem;
+    font-size: medium;
+    font-weight: 800;
+    color: rgb(250, 246, 246);
+    transition: all 400ms ease;
+}
+ul a li:hover{
+    background-color: rgb(73, 116, 173);
+    color: white;
+    font-size: medium;
+    font-weight: 800;
+    border-left: 0.7px solid white;
+    border-bottom: 0.7px solid white;
+}
+.bbb {
+    width: 50px;
+    height: 80px;
+  }
+  .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    align-items: space-between;
+  }
+  
+  .panel h2 {
+    margin: 10px 0;
+  }
+  
+.blogContent{
+    flex-basis: 100%;
+}
+.CardsContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+
+}
+.cards{
+    padding: 3rem 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    text-align: center;
+    /* height: fit-content; */
+    transition: all 400ms ease;
+}
+.cards:hover{
+    padding: 3rem 3rem;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: gray;
+    cursor: pointer;
+    border: 1px solid rgb(3, 3, 3);
+    text-align: center;
+    /* height: fit-content; */
+}
+
+
+/* ===========================Managecards========================= */
+.Managecards{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.Managecards> :nth-child(1){
+    border-right: 5px solid rgb(15, 6, 6);
+    border-radius: 0 0.5rem 0 0;
+}
+.mcontents{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gray;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+.btn .cards:hover{
+    width:90px;
+    height: 40px;
+    cursor: pointer;
+    color: rgb(255, 252, 252);
+    background-color: rgb(231, 231, 231);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+}
+.btn:nth-child(1){
+    background-color: rgb(80, 184, 97);
+}
+.btn:nth-child(1) :hover{
+    background-color: rgb(80, 116, 184);
+}
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* ================== create Blog =========================== */
+.blogContent form{
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+.formGroup input{
+    width: 100%;
+}
+.blogContent h2{
+    text-align: center;
+}
+
+
+/* ========================= Dash Media ============================== */
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        width: var(--width-md);
+        margin: 0 auto;
+    }
+    .blogContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 100vh;
+        border-radius: 0.5rem;
+        padding:  1rem;
+    }
+    .blogMenu{
+        flex-basis: 100%;
+        border-left: 10px solid gray;
+        background-color: black;
+        border-radius: 0.5rem 0 0 0.5rem;
+        opacity: 0.7;
+    }
+    .CardsContainer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        margin-bottom: 4rem;
+    
+    }
+}
+
+table{
+    margin-top:50px;
+    width:100%;
+    border-collapse:collapse;
+    text-align:left;
+    position: relative;
+  }
+  
+  th{
+    background-color:#f8f4f4;
+    padding:8px;
+    border:none;
+    width: 50%;
+  }
+  
+  td{
+    padding:8px;
+    border:none !important;
+  }
+  
+  .title{
+    background-color:white;
+  }
+  
+  .button3{
+    display:flex;
+    justify-content:center;
+    width: 50%;
+  }
+  
+  .delete{
+    background-color:rgb(126, 66, 66);
+    color:white;
+    padding:5px 10px;
+    border:none;
+    border-radius:5px;
+    margin-right:10px;
+    cursor:pointer;
+  }
+  
+  .edit{
+    background-color:rgb(23, 83, 43);
+    color:white;
+    padding:5px 10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+  }
+  
+  .image2{
+    width:20%;
+  }
+  
+  .titlee{
+    width:20%;
+  }
+  
+  
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: var(--width-sm);
+        margin: 0 auto;
+    }
+    .blogContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 100vh;
+        border-radius: 0.5rem;
+        padding:  1rem;
+    }
+    .blogMenu{
+        flex-basis: 100%;
+        border-left: 10px solid gray;
+        background-color: black;
+        border-radius: 0.5rem 0 0 0.5rem;
+        opacity: 0.7;
+    }
+    .CardsContainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 2rem;
+        margin-bottom: 4rem;
+    
+    }
+    .mcontents{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        width: 100%;
+        background-color: gray;
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+#Dashbord{
+    height: 200vh;
+    margin-bottom: -2rem;
+
+}
+
+
+
+}

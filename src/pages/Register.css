@@ -1,0 +1,64 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #F2F2F2;
+    min-height: 80vh;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #707070;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    border-bottom: 2px solid lightblue;
+  }
+  
+  button {
+    width: 80%;
+    padding: 15px;
+    background-color: rgb(192, 212, 219);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #3e454b;
+  }
+  
+  h1 {
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  h4 {
+    margin-bottom: 60px;
+    font-size: 24px;
+    align-items: center;
+  }
+  p {
+    margin: 0;
+  }
+  
+  .register-link {
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+  }
