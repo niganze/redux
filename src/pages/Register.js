@@ -36,7 +36,7 @@ const Register = () => {
    return (
         <form className='register'onSubmit={handleSubmit(onSubmit)}>
           <h1>Create an account</h1>
-          {/* <span>{errors?.name?.message}</span> */}
+          <span>{errors?.name?.message}</span>
             <label>Username:</label>  
            <input 
                type="text" 
@@ -62,7 +62,7 @@ const Register = () => {
         placeholder="password"
         aria-describedby="pwdnote"
         {...register("password")} />
-       {/* <span>{errors?.password?.message}</span> */}
+       <span>{errors?.password?.message}</span>
          <label>Confirm password:</label>
         <input 
         type="password" 
@@ -71,7 +71,7 @@ const Register = () => {
         aria-describedby="Matchpwdnote"
         {...register("confirms password")}
        />
-       {/* <span>{errors?.password?.message}</span> */}
+       <span>{errors?.password?.message}</span>
       <button type="submit">Create account</button>
       <p>Already have an account? <Link to='/login'style={{color: 'inherit', textDecoration: 'inherit'}} ><span>Login</span></Link></p>
         </form>
