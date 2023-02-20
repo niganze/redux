@@ -170,6 +170,12 @@
     font-size: 30px;
     font-weight: bold;
   }
+  .comments {
+    color:rgb(0, 0, 0);
+  }
+  .commentsd {
+    
+  }
   @media screen {
     .singlePostImg {
       width: 100%;

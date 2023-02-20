@@ -50,15 +50,12 @@ const {setAuth} = useContext(AuthContext);
       }
        else{
         setErrorMessage('Login failed')
-       }
-       
+       }   
     }
-
     console.log (username, password);
       setUsername('');
       setPassword('');
   }
-
   return (
        <>  
     <form className='login' onSubmit={handleSubmit} autoComplete="off">

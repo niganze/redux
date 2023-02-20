@@ -8,7 +8,6 @@ import {AiTwotoneHome} from 'react-icons/ai'
 import {FcManager} from 'react-icons/fc'
 import {FcNews} from 'react-icons/fc'
 import {RiLogoutBoxRFill} from 'react-icons/ri'
-
 import { Link, Outlet } from 'react-router-dom'  
 function Dashborad() {
   return (

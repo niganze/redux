@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaUser } from 'react-icons/fa'
 import { useNavigate,Link} from 'react-router-dom'
 import * as yup  from "yup"
 import  {yupResolver} from "@hookform/resolvers/yup"
@@ -34,7 +33,7 @@ const Register = () => {
         console.log(error.response);
       }
   }
-return (
+   return (
         <form className='register'onSubmit={handleSubmit(onSubmit)}>
           <h1>Create an account</h1>
           {/* <span>{errors?.name?.message}</span> */}
@@ -55,7 +54,7 @@ return (
               aria-describedby="emailnote"
               {...register("email")}
               />
-<span>{errors?.email?.message}</span>
+          <span>{errors?.email?.message}</span>
            <label>Password:</label>       
         <input 
         type="password" 
@@ -70,7 +69,7 @@ return (
         id="confirm_pwd"
         placeholder="confirm password"
         aria-describedby="Matchpwdnote"
-        {...register("coforms password")}
+        {...register("confirms password")}
        />
        {/* <span>{errors?.password?.message}</span> */}
       <button type="submit">Create account</button>

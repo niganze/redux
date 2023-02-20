@@ -13,22 +13,23 @@ const { register, handleSubmit, reset } = useForm({
     decription:selected?.decription,
   },
 });
-const onSubmit = async ({image, title,content}) => {
+const onSubmit = async ({image, title,content,author}) => {
 
   const formData = new FormData();
   formData.append("title", title);
   formData.append("content", content);
+  formData.append("author", author);
   formData.append("image", image[0]);
   
   try {
-     await axios.patch(`https://blogapi-uvr7.onrender.com/api/v1/blog/upBlog${selected._id}` , formData,{
+     await axios.put(`https://blogapi-uvr7.onrender.com/api/v1/blog/upBlog/${selected._id}` , formData,{
       headers:{
         "Content-Type": "multipart/form-data",
         Authorization:`Bearer ${localStorage.getItem("token")}`
     }
     });
      reset();
-    alert ("Successfully");
+    alert ("Successfully updated ");
   } 
   catch (err) {
     console.error(err.response);
@@ -88,6 +89,7 @@ const getSingle = async (id) =>{
             ))}
           </tbody>
         </table> 
+        {/* edit blog with api  */}
       <div className="editblog"  style={ {display: !modal? "none" : "flex" }}>
         <form  className ="update"onSubmit={handleSubmit(onSubmit)}>
         <h2>Create New Blog</h2>
@@ -102,11 +104,15 @@ const getSingle = async (id) =>{
         rows="10"
       >
       </textarea>
+      <input type="text" 
+        {...register("author")}
+        placeholder={"Enter author"}
+      />
       <div className="div">
       <label htmlFor="">Image</label>
       <input
         type="file"
-        name=""
+        name="image"
         id="file"
         {...register("image")}
       />
@@ -118,7 +124,7 @@ const getSingle = async (id) =>{
         cancel</button>
       </div>
       </div>
-    </form>
+      </form>
       </div>
       </div>
     </section>

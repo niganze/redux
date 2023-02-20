@@ -354,5 +354,24 @@ h1{
     margin-top: -1rem;
     
   }
+  .editbuttonr button[type="submit"],
+.editbuttonr button.cancel {
+  background-color: #363738; 
+  color: #fff; 
+  border: none; 
+  padding: 6px 12px; 
+  border-radius: 4px; 
+  font-size: 14px; 
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.editbuttonr button[type="submit"]:hover,
+.editbuttonr button.cancel:hover {
+  background-color: #ffffff;
+  color:black;
+  font-weight: bold;
+}
+
   
   

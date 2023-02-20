@@ -251,13 +251,13 @@ img{
     font-family: bold;
     font-size: none;
     font-weight: bold;
-    
     color: black;
   }
   #bagger {
     display: flex;
     font-size: 20px;
-    flex-direction: row;
+    flex-direction: column;
+    
   }
   form.login {
     width: 90%;
@@ -265,11 +265,7 @@ img{
   input {
     font-size: 1rem;
   }
-  #bagger {
-    display: grid;
-    font-size: 20px;
-    
-  }
+ 
   header nav {
     display: block;
     align-items: space-between;
