@@ -18,7 +18,7 @@ console.log(AllBlogs)
   const {reset}=useForm();
   const { register, handleSubmit, formState: { errors } } = useForm();
   const validationRules = {
-    description: { required: true, minLength: 7 }
+    Comment: { required: true, minLength: 5 }
   };
   const onSubmit = async (data) => {
        console.log (data);
@@ -73,7 +73,10 @@ console.log(AllBlogs)
         <div className="commentsd">
           <h3>Comments</h3>
           {comments.map(comment =>{
-            return <div> <h6>{comment.username}</h6> <p>{comment.comment}</p> </div>
+            return <div> 
+              <h6>{comment.username}</h6> 
+              <p>{comment.comment}</p>
+              </div>
           })}
         </div>
         <div className="singlePostEdit">
@@ -90,8 +93,8 @@ console.log(AllBlogs)
               </div>
               <div className="formGroup">
                 <label htmlFor="description">Drop Your Comment</label>
-                <textarea {...register('description', validationRules.description)} placeholder='Description'/>
-                {errors.description && <span className="error">comment is required and must be at least 7 characters long.</span>}
+                <textarea {...register('comment', validationRules.comment)} placeholder='comment'/>
+                {errors.comment && <span className="error">comment is required and must be at least 5 characters long.</span>}
               </div>
               <div className="formGroup">
                 <input type="submit" value="comment" className='btn'/>

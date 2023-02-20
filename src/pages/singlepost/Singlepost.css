@@ -173,8 +173,8 @@
   .comments {
     color:rgb(0, 0, 0);
   }
-  .commentsd {
-    
+  img{
+    width: 100%;
   }
   @media screen {
     .singlePostImg {
